@@ -110,7 +110,7 @@ def main():
                                 
     if selected == 'Exploratory Data Analysis':
         st.title('Exploratory Data Analysis')
-        st.image('resources/imgs/AI-new-1.JPG',use_column_width=True) 
+        st.image('resources/imgs/AI-new-1.jpg',use_column_width=True) 
         if st.checkbox("ratings"):
             st.subheader("1. Movie ratings")
             st.image('resources/imgs/distribution-ratings.PNG',use_column_width=True)
@@ -242,7 +242,7 @@ def main():
         st.write("Call Us On:")
         st.button("01125693289")
         st.write("Call us from your subscribed mobile number.")
-        st.image('resources/imgs/logo3.jpeg')
+        st.image('resources/imgs/Logo3.jpeg')
     
 if __name__ == '__main__':
     main()
