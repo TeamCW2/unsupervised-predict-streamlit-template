@@ -47,23 +47,15 @@ title_list = load_movie_titles('resources/data/movies.csv')
 # App declaration
 def main():
 
-
     # DO NOT REMOVE the 'Recommender System' option below, however,
     # you are welcome to add more options to enrich your app.
-
     st.sidebar.image('resources/imgs/Disneylogo.png', use_column_width=True) 
-    with st.sidebar:
-        selected = option_menu(
-                menu_title = 'Choose option',
-                menu_icon="list", 
-                options = ['Recommender System','Exploratory Data Analysis',"Solution Overview",'About',
-                'Help center'],
-                )
-        
+    page_options = ["Recommender System","Solution Overview",'Exploratory Data Analysis','About','Help center']
         # -------------------------------------------------------------------
         # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
         # ------------------------------------------------------------------- 
-    if selected == "Recommender System":
+    page_selection = st.sidebar.selectbox("Choose Option", page_options)
+    if page_selection== "Recommender System":
             # Header contents
             st.write('# Movie Recommender Engine')
             st.write('### EXPLORE Data Science Academy Unsupervised Predict')
@@ -107,11 +99,11 @@ def main():
                     except:
                         st.error("Oops! Looks like this algorithm does't work.\
                                 We'll need to fix it!")
-                                
+
 # -------------------------------------------------------------------
  # ------------- SAFE FOR ALTERING/EXTENSION -------------------
                                 
-    if selected == 'Exploratory Data Analysis':
+    if page_selection == 'Exploratory Data Analysis':
         st.title('Exploratory Data Analysis')
         st.image('resources/imgs/AI-new-1.jpg',use_column_width=True) 
         if st.checkbox("ratings"):
@@ -142,7 +134,7 @@ def main():
         
 
         # ------------- SAFE FOR ALTERING/EXTENSION -------------------
-    if selected == "Solution Overview":
+    if page_selection == "Solution Overview":
         st.title("Solution Overview")
             #st.write("RMSE of the recommendation models to show their performance")
         st.markdown('We employed two methods of building recommmendation system:')
@@ -156,7 +148,7 @@ def main():
         st.markdown('From the image above the SVD model perfomed best with an RMSE of 0.834903 as compared to the other models.')
         st.markdown('The singular value decomposition (SVD) provides another way to factorize a matrix, into singular vectors and singular values. The SVD allows us to discover some of the same kind of information as the eigen decomposition.The SVD is used widely both in the calculation of other matrix operations, such as matrix inverse, but also as a data reduction method in machine learning. SVD can also be used in least squares linear regression, image compression, and denoising data.')
 
-    if selected == "About":  
+    if page_selection == "About":  
         st.write("### Overview: Generating a movie recommender system using unsupervised learning skills")
         st.image('resources/imgs/popcorn2-new-1.jpg',use_column_width=True)   
         # You can read a markdown file from supporting resources folder
@@ -198,7 +190,7 @@ def main():
         train.csv - The training split of the dataset. Contains user and movie IDs with associated rating data.""")
 
     # You may want to add more sections here for aspects such as an EDA,
-    if selected == "Help center":
+    if page_selection == "Help center":
         st.header("Help Desk")
         st.subheader("Please give us feedback about this app")
         st.write("""Please use the reaching out options below to provide feedback on content and/or your experience using this app. We're always looking to improve, so we appreciate hearing from you! Though we can't respond to submissions individually, our teams do review all feedback. Please do not include any personal information.""")
