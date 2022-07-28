@@ -75,9 +75,9 @@ def main():
 
             # User-based preferences
             st.write('### Enter Your Three Favorite Movies')
-            movie_1 = st.selectbox('First Option',title_list[1:500])
-            movie_2 = st.selectbox('Second Option',title_list[501:1000])
-            movie_3 = st.selectbox('Third Option',title_list[1001:1500])
+            movie_1 = st.selectbox('First Option',title_list[14930:15200])
+            movie_2 = st.selectbox('Second Option',title_list[25055:25255])
+            movie_3 = st.selectbox('Third Option',title_list[21100:21200])
             fav_movies = [movie_1,movie_2,movie_3]
 
             # Perform top-10 movie recommendation generation
@@ -107,6 +107,9 @@ def main():
                     except:
                         st.error("Oops! Looks like this algorithm does't work.\
                                 We'll need to fix it!")
+                                
+# -------------------------------------------------------------------
+ # ------------- SAFE FOR ALTERING/EXTENSION -------------------
                                 
     if selected == 'Exploratory Data Analysis':
         st.title('Exploratory Data Analysis')
