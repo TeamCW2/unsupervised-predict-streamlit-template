@@ -115,7 +115,7 @@ def main():
             st.subheader("1. Movie ratings")
             st.image('resources/imgs/distribution-ratings.png',use_column_width=True)
             st.subheader('2. Compared to movies that have lower average ratings, movies with higher average ratings actually have more number of ratings') 
-            st.image('resources/imgs/ratings.png',use_column_width=True)
+            st.image('resources/imgs/Ratings.png',use_column_width=True)
 
         if st.checkbox("genre wordcloud"):
             st.subheader("Top Genres")
