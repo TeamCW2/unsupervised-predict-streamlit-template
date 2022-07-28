@@ -115,7 +115,7 @@ def main():
             st.subheader("1. Movie ratings")
             st.image('resources/imgs/distribution-ratings.PNG',use_column_width=True)
             st.subheader('2. Compared to movies that have lower average ratings, movies with higher average ratings actually have more number of ratings') 
-            st.image('resources/imgs/ratings.PNG',use_column_width=True)
+            st.image('resources/imgs/ratings.png',use_column_width=True)
 
         if st.checkbox("genre wordcloud"):
             st.subheader("Top Genres")
@@ -128,13 +128,13 @@ def main():
 
         if st.checkbox("Relevance"):
             st.subheader("Data taken from genome_scores")
-            st.image('resources/imgs/boxplot.PNG',use_column_width=True)
+            st.image('resources/imgs/boxplot.png',use_column_width=True)
 
         if st.checkbox("movies"):
             st.subheader("avarage rating per director")
-            st.image('resources/imgs/visual2.PNG',use_column_width=True)
+            st.image('resources/imgs/visual2.png',use_column_width=True)
             st.subheader("movies with 100 or more viewers")
-            st.image('resources/imgs/visual1.PNG',use_column_width=True)
+            st.image('resources/imgs/visual1.png',use_column_width=True)
 
         
 
